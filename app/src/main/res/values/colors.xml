@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#009688</color> <color name="colorAccent">#00796b</color>
+    <color name="colorBackground">#f5f5f5</color>
+    <color name="colorTextPrimary">#212121</color>
+    <color name="colorTextSecondary">#82AAB4</color>
+    <color name="colorActiveTripBg">#e0f2f1</color>
+    <color name="colorButtonPrimary">#00796b</color>
+    <color name="colorWhite">#FFFFFF</color>
+</resources>

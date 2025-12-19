@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/stat_card_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    android:background="@drawable/bg_stat_card"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/stat_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/photo"
+        android:color="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/stat_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="12 поездок"
+        android:textColor="@color/colorTextPrimary"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/stat_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Путешествия"
+        android:textColor="@color/colorTextSecondary"
+        android:textSize="10sp" />
+</LinearLayout>

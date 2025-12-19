@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rounded_top_white_background">
+
+    <TextView
+        android:id="@+id/tv_active_trip_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Активная поездка"
+        android:textColor="@color/colorTextSecondary"
+        android:textSize="14sp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Загрузка..."
+        android:textColor="@color/colorTextPrimary"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_active_trip_title" />
+
+    <TextView
+        android:id="@+id/tv_dates"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="--/--/----"
+        android:textColor="@color/colorTextSecondary"
+        android:textSize="12sp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_city" />
+
+    <ImageButton
+        android:id="@+id/btn_play_pause"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:background="@drawable/circle_background_accent"
+        android:contentDescription="Play/Pause"
+        android:elevation="4dp"
+        android:src="@drawable/play"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_active_trip_title"
+        android:layout_marginEnd="16dp"/>
+
+    <TextView
+        android:id="@+id/tv_km"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.0 км"
+        android:textColor="@color/colorTextPrimary"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_dates" />
+
+    <TextView
+        android:id="@+id/tv_steps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0 шагов"
+        android:textColor="@color/colorTextPrimary"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_km" />
+
+    <TextView
+        android:id="@+id/tv_km_per_hour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.0 км/ч"
+        android:textColor="@color/colorTextPrimary"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/btn_play_pause"
+        app:layout_constraintTop_toTopOf="@id/tv_km" />
+
+    <TextView
+        android:id="@+id/tv_altitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0 м"
+        android:textColor="@color/colorTextPrimary"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/btn_play_pause"
+        app:layout_constraintTop_toBottomOf="@id/tv_km_per_hour" />
+
+
+    <LinearLayout
+        android:id="@+id/btns"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_altitude">
+
+        <include
+            android:id="@+id/button_one"
+            layout="@layout/custom_icon_button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="5dp"/>
+
+        <include
+            android:id="@+id/button_two"
+            layout="@layout/custom_icon_button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="5dp"/>
+
+        <include
+            android:id="@+id/button_three"
+            layout="@layout/custom_icon_button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_chronology_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="События поездки"
+        android:textColor="@color/colorTextPrimary"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btns" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_timeline"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingBottom="80dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/tv_chronology_title"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:listitem="@layout/item_chronology_event"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

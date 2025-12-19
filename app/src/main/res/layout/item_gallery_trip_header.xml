@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="16dp"
+    android:paddingTop="8dp"
+    android:paddingEnd="8dp"
+    android:background="@color/colorBackground">
+
+    <TextView
+        android:id="@+id/tv_trip_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Поездка в Париж"
+        android:textColor="@color/colorTextPrimary"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_trip_stats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="12.06.2024 – 25.06.2024 · 58 фото · 12 видео"
+        android:textColor="@color/colorTextSecondary"
+        android:textSize="12sp"
+        android:paddingBottom="8dp"/>
+</LinearLayout>

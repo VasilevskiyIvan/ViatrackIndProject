@@ -1,0 +1,80 @@
+[versions]
+# --- ТВОИ ВЕРСИИ (ОСТАВЛЕНЫ) ---
+agp = "8.13.0"
+kotlin = "2.0.21"
+coreKtx = "1.17.0"
+junit = "4.13.2"
+junitVersion = "1.3.0"
+espressoCore = "3.7.0"
+appcompat = "1.7.1"
+material = "1.13.0"
+activity = "1.11.0"
+constraintlayout = "2.2.1"
+
+# --- ДОБАВЛЕНА ВЕРСИЯ ДЛЯ KAPT ---
+# (Берем ту же, что и 'kotlin')
+kotlinKapt = "2.0.21"
+
+# --- ДОБАВЛЕНЫ ВЕРСИИ ДЛЯ НОВЫХ БИБЛИОТЕК ---
+room = "2.6.1"
+lifecycle = "2.8.1"
+coroutines = "1.8.0"
+playServicesLocation = "21.3.0"
+fragmentKtx = "1.8.0"
+
+# --- ДОБАВЛЕНЫ ВЕРСИИ ИЗ ТВОЕГО ПЕРВОГО ПРОЕКТА ---
+# (Ты их использовал, но не добавил в toml)
+circleimageview = "3.1.0"
+cardview = "1.0.0"
+gridlayout = "1.0.0"
+
+
+[libraries]
+# --- ТВОИ БИБЛИОТЕКИ (ОСТАВЛЕНЫ) ---
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+
+# --- ЗАМЕНА 'activity' НА 'activity-ktx' (РЕКОМЕНДУЕТСЯ) ---
+# androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" } # Старый
+androidx-activity-ktx = { group = "androidx.activity", name = "activity-ktx", version.ref = "activity" } # Новый
+
+# --- БИБЛИОТЕКИ ИЗ ТВОЕГО ПЕРВОГО build.gradle ---
+circleimageview = { group = "de.hdodenhof", name = "circleimageview", version.ref = "circleimageview" }
+cardview = { group = "androidx.cardview", name = "cardview", version.ref = "cardview" }
+gridlayout = { group = "androidx.gridlayout", name = "gridlayout", version.ref = "gridlayout" }
+
+# --- ДОБАВЛЕНЫ НОВЫЕ БИБЛИОТЕКИ ДЛЯ ТРЕКЕРА ---
+# Room (База данных)
+room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
+room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+
+# Lifecycle (ViewModel, LiveData, Service)
+lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
+lifecycle-livedata-ktx = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "lifecycle" }
+lifecycle-common-java8 = { group = "androidx.lifecycle", name = "lifecycle-common-java8", version.ref = "lifecycle" }
+lifecycle-service = { group = "androidx.lifecycle", name = "lifecycle-service", version.ref = "lifecycle" }
+
+# Coroutines (Асинхронность)
+coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
+coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
+
+# Геолокация
+play-services-location = { group = "com.google.android.gms", name = "play-services-location", version.ref = "playServicesLocation" }
+
+# Fragment KTX
+fragment-ktx = { group = "androidx.fragment", name = "fragment-ktx", version.ref = "fragmentKtx" }
+
+
+[plugins]
+# --- ТВОИ ПЛАГИНЫ (ОСТАВЛЕНЫ) ---
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+
+# --- ДОБАВЛЕН ПЛАГИН KAPT (ДЛЯ ROOM) ---
+kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlinKapt" }

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ViaTrack</string>
+    <string name="photos_count">%d фото</string>
+    <string name="videos_count">%d видео</string>
+    <string name="distance_km">%s км</string>
+    <string name="photos_count_short">%d фото</string>
+    <string name="videos_count_short">%d видео</string>
+    <string name="distance_km_short">%s км</string>
+</resources>
